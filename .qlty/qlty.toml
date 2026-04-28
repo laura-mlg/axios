@@ -1,0 +1,80 @@
+# This configuration was generated with the setup-qlty-toml skill.
+# For reference: https://docs.qlty.sh/qlty-toml
+config_version = "0"
+
+exclude_patterns = [
+  "*_min.*",
+  "*-min.*",
+  "*.min.*",
+  "**/.yarn/**",
+  "**/*.d.ts",
+  "**/bower_components/**",
+  "**/build/**",
+  "**/dist/**",
+  "**/generated/**",
+  "**/node_modules/**",
+  "**/vendor/**",
+]
+
+test_patterns = [
+  "**/test/**",
+  "**/spec/**",
+  "**/*.test.*",
+  "**/*.spec.*",
+  "**/*_test.*",
+  "**/*_spec.*",
+  "**/test_*.*",
+  "**/spec_*.*",
+]
+
+[smells]
+mode = "comment"
+
+# REQUIRED — points to the built-in Qlty plugin registry. Do not omit this block.
+[[source]]
+name = "default"
+default = true
+
+# Security scanners
+[[plugin]]
+name = "trufflehog"
+mode = "block"
+
+[[plugin]]
+name = "osv-scanner"
+mode = "block"
+
+[[plugin]]
+name = "trivy"
+mode = "block"
+drivers = ["vuln"]
+
+[[plugin]]
+name = "zizmor"
+mode = "block"
+
+# Language linters
+[[plugin]]
+name = "eslint"
+mode = "comment"
+config_files = [".qlty/configs/eslint.config.mjs"]
+extra_packages = ["@eslint/js@10.0.1", "globals@17.5.0"]
+
+# Formatters
+[[plugin]]
+name = "prettier"
+mode = "comment"
+config_files = [".prettierrc"]
+
+# Cross-language tools
+[[plugin]]
+name = "actionlint"
+mode = "comment"
+
+[[plugin]]
+name = "markdownlint"
+mode = "comment"
+
+[[plugin]]
+name = "yamllint"
+mode = "comment"
