@@ -57,8 +57,8 @@ mode = "block"
 [[plugin]]
 name = "eslint"
 mode = "comment"
-config_files = [".qlty/configs/eslint.config.mjs"]
-extra_packages = ["@eslint/js@10.0.1", "globals@17.5.0"]
+config_files = [".qlty/configs/eslint.config.js"]
+extra_packages = ["@eslint/js@9.7.0", "globals@15.14.0"]
 
 # Formatters
 [[plugin]]
