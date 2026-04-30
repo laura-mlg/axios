@@ -362,18 +362,6 @@
 - [Credits](#credits)
 - [License](#license)
 
-## Features
-
-- **Browser Requests:** Make [XMLHttpRequests](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) directly from the browser.
-- **Node.js Requests:** Make [http](https://nodejs.org/api/http.html) requests from Node.js environments.
-- **Promise-based:** Fully supports the [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) API for easier asynchronous code.
-- **Interceptors:** Intercept requests and responses to add custom logic or transform data.
-- **Data Transformation:** Transform request and response data automatically.
-- **Request Cancellation:** Cancel requests using built-in mechanisms.
-- **Automatic JSON Handling:** Automatically serializes and parses [JSON](https://www.json.org/json-en.html) data.
-- **Form Serialization:** 🆕 Automatically serializes data objects to `multipart/form-data` or `x-www-form-urlencoded` formats.
-- **XSRF Protection:** Client-side support to protect against [Cross-Site Request Forgery](https://en.wikipedia.org/wiki/Cross-site_request_forgery).
-
 ## Browser Support
 
 |                                                     Chrome                                                     |                                                      Firefox                                                      |                                                     Safari                                                     |                                                    Opera                                                    |                                                   Edge                                                   |
